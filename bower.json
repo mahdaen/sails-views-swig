@@ -1,0 +1,20 @@
+{
+    "name"        : "sails-views-swig",
+    "version"     : "1.0.0",
+    "description" : "Sails blueprint with Swig template engine",
+    "ignore"      : [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "library",
+        "test",
+        "tests"
+    ],
+    "keywords": [
+        "sails",
+        "swig",
+        "sails swig template"
+    ],
+    "author": "Nanang Mahdaen El Agung <nanang@mahdaen.name> (http://mahdaen.name)",
+    "license": "MIT"
+}
