@@ -19,8 +19,7 @@
     },
     "scripts"      : {
         "debug" : "node debug app.js",
-        "start" : "node app.js",
-        "test"  : "node app.js"
+        "start" : "node app.js"
     },
     "keywords"     : [
         "sails",
