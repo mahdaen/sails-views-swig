@@ -1,8 +1,12 @@
-/* LOADING CONFIGURATIONS */
-/* ---------------------- */
-'@import config.js';
+/* INIT CONFIGURATIONS */
+/* ------------------- */
+'@namespace config';
 
-/* Initializing Configs */
+/* Importing Configurations */
+'@import configs/';
+
+/* APPLYING CONFIGS */
+/* ---------------- */
 grunt.initConfig(config);
 
 /* REGISTERING TASKS */
@@ -11,7 +15,7 @@ grunt.initConfig(config);
 grunt.registerTask('SyncAssets', [ 'sync:fonts', 'sync:images', 'sync:icons' ]);
 
 /* Registering Default Task */
-grunt.registerTask('default', [ 'clean', 'exports', 'sass:devl', 'SyncAssets', 'watch' ]);
+grunt.registerTask('default', [ 'clean', 'exports', 'sass:devl', 'SyncAssets' ]);
 
 /* Registering Default Task */
 grunt.registerTask('build', [ 'clean', 'exports', 'sass:devl', 'SyncAssets', 'sync:prod' ]);
