@@ -1,9 +1,9 @@
 {
-    "name"         : "sails-views-swig",
-    "version"      : "1.0.0",
-    "description"  : "Sails blueprint with Swig template engine",
-    "main"         : "app.js",
-    "dependencies" : {
+    "name"            : "sails-views-swig",
+    "version"         : "1.1.2",
+    "description"     : "Sails blueprint with Swig template engine",
+    "main"            : "app.js",
+    "dependencies"    : {
         "grunt"               : "^0.4.5",
         "grunt-contrib-clean" : "~0.5.0",
         "grunt-contrib-watch" : "~0.5.3",
@@ -17,15 +17,24 @@
         "sails-disk"          : "~0.10.0",
         "swig"                : "^1.4.2"
     },
-    "scripts"      : {
+    "scripts"         : {
         "debug" : "node debug app.js",
         "start" : "node app.js"
     },
-    "keywords"     : [
+    "keywords"        : [
         "sails",
         "swig",
         "sails swig template"
     ],
-    "author"       : "Nanang Mahdaen El Agung <nanang@mahdaen.name> (http://mahdaen.name)",
-    "license"      : "MIT"
+    "author"          : "Nanang Mahdaen El Agung <nanang@mahdaen.name> (http://mahdaen.name)",
+    "license"         : "MIT",
+    "devDependencies" : { },
+    "repository"      : {
+        "type" : "git",
+        "url"  : "git+https://github.com/mahdaen/sails-views-swig.git"
+    },
+    "bugs"            : {
+        "url" : "https://github.com/mahdaen/sails-views-swig/issues"
+    },
+    "homepage"        : "https://github.com/mahdaen/sails-views-swig#readme"
 }

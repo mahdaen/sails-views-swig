@@ -1,6 +1,6 @@
 {
     "name"        : "sails-views-swig",
-    "version"     : "1.0.0",
+    "version"     : "1.1.2",
     "description" : "Sails blueprint with Swig template engine",
     "ignore"      : [
         "**/.*",
@@ -10,11 +10,18 @@
         "test",
         "tests"
     ],
-    "keywords": [
+    "keywords"    : [
         "sails",
         "swig",
-        "sails swig template"
+        "sails",
+        "swig",
+        "template"
     ],
-    "author": "Nanang Mahdaen El Agung <nanang@mahdaen.name> (http://mahdaen.name)",
-    "license": "MIT"
+    "author"      : "Nanang Mahdaen El Agung <nanang@mahdaen.name> (http://mahdaen.name)",
+    "license"     : "MIT",
+    "homepage"    : "https://github.com/mahdaen/sails-views-swig",
+    "main"        : "app.js",
+    "authors"     : [
+        "Nanang Mahdaen El Agung <nanang@mahdaen.name> (http://mahdaen.name)"
+    ]
 }
