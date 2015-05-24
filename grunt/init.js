@@ -7,12 +7,15 @@ grunt.initConfig(config);
 
 /* REGISTERING TASKS */
 /* ----------------- */
-/* Registering Default Task */
-grunt.registerTask('default', [ 'clean', 'exports', 'sass:devl', 'sync', 'watch' ]);
+/* Sync Assets */
+grunt.registerTask('SyncAssets', [ 'sync:fonts', 'sync:images', 'sync:icons' ]);
 
 /* Registering Default Task */
-grunt.registerTask('buildDevl', [ 'clean', 'exports', 'sass:devl', 'sync', 'watch' ]);
+grunt.registerTask('default', [ 'clean', 'exports', 'sass:devl', 'SyncAssets', 'watch' ]);
 
 /* Registering Default Task */
-grunt.registerTask('buildProd', [ 'clean', 'exports', 'sass:prod', 'sync' ]);
+grunt.registerTask('build', [ 'clean', 'exports', 'sass:devl', 'SyncAssets', 'sync:prod' ]);
+
+/* Registering Default Task */
+grunt.registerTask('prod', [ 'clean', 'exports', 'sass:prod', 'SyncAssets', 'sync:prod' ]);
 

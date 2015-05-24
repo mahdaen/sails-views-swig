@@ -39,5 +39,16 @@ var icons = {
     updateAndDelete : true
 }
 
+/* Productions */
+var prod = {
+    files : [
+        {
+            cwd  : '.tmp/public',
+            src  : [ '**' ],
+            dest : 'www/public'
+        }
+    ]
+}
+
 /* Loading NPM Task */
 grunt.loadNpmTasks('grunt-sync');
