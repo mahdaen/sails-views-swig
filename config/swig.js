@@ -11,13 +11,39 @@ module.exports = {
         /* Swig Renderer */
         var swig = require('swig'), min = '.min';
 
-        if (data.settings.env === 'development') {
+        if ( data.settings.env === 'development' ) {
             min = '';
         }
 
-        /* Bind extra datas */
-        data.script = [ 'scripts/com.libs' + min + '.js', 'scripts/com.apps' + min + '.js' ];
-        data.styles = [ 'styles/main.css' ];
+        /* Bind injected js files */
+        if ( !data.scripts ) {
+            data.scripts = [ 'com.libs', 'com.apps' ];
+        }
+
+        /* Bind injected css files */
+        if ( !data.styles ) {
+            data.styles = [ 'main' ];
+        }
+
+        /* Bind public paths */
+        var paths = {
+            script : '/scripts',
+            style  : '/styles',
+            image  : '/images',
+            font   : '/fonts',
+            icon   : '/icons'
+        };
+
+        if ( !data.path ) {
+            data.path = paths;
+        }
+        else {
+            for ( var key in paths ) {
+                if ( !key in data.path ) {
+                    data.path[ key ] = paths[ key ];
+                }
+            }
+        }
 
         /* Render Templates */
         return swig.renderFile(path, data, cb);

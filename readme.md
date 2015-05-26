@@ -99,5 +99,7 @@ bower install --save jquery short-sass
 ```
 
 ## **History**
+
+2015/05/24          v1.1.5          "Adding www to gitignore, change grunt-watch config, and adding local data."
 2015/05/24          v1.1.4          "Adding pattern to .foreverignore"
 2015/05/24          v1.1.3          "Adding .foreverignore and updating readme"

@@ -61,7 +61,7 @@ config/local.js
 
 node_modules
 bower_components
-libs
+library
 
 ################################################
 # Sails.js / Waterline / Grunt
@@ -71,6 +71,7 @@ libs
 ################################################
 .tmp
 dump.rdb
+www
 
 ################################################
 # Node.js / NPM

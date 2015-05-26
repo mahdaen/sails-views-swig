@@ -8,27 +8,27 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
     <meta name="format-detection" content="telephone=no">
-    <meta name="description" content="{{ description }}">
-    <meta name="keyword" content="{{ keyword }}">
+    <meta name="description" content="{{ meta.description }}">
+    <meta name="keyword" content="{{ meta.keyword }}">
 
     <!-- Window Title -->
-    <title>{{ title }}</title>
+    <title>{{ page.title }}</title>
 
     <!-- Application Icon -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ iconpath }}/app-icon.144.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ iconpath }}/app-icon.114.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ iconpath }}/app-icon.72.png"/>
-    <link rel="apple-touch-icon-precomposed" href="{{ iconpath }}/app-icon.57.png"/>
-    <link rel="shortcut icon" href="{{ iconpath }}/favicon.ico" type="image/vnd.microsoft.icon"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ path.icon }}/app-icon.144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ path.icon }}/app-icon.114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ path.icon }}/app-icon.72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="{{ path.icon }}/app-icon.57.png"/>
+    <link rel="shortcut icon" href="{{ path.icon }}/favicon.ico" type="image/vnd.microsoft.icon"/>
 
     <!-- Stylesheets -->
-    {% for css in styles -%}
-        <link rel="stylesheet" href="{{ css }}"/>
+    {% for cssfile in styles -%}
+        <link rel="stylesheet" href="{{ path.style }}/{{ cssfile }}.css"/>
     {%- endfor %}
 
     {% if settings.env == 'development' -%}
         <!-- Livereload -->
-        <script type="text/javascript" src="http://localhost:2838/livereload.js"></script>
+        <script type="text/javascript" src="http://localhost:9090/livereload.js"></script>
     {%- endif %}
 </head>
     <body class="application">
@@ -42,8 +42,12 @@
     {% block footer -%}{%- endblock %}
 
     <!-- Scripts -->
-    {% for js in script -%}
-        <script type="text/javascript" src="{{ js }}"></script>
+    {% for jsfile in scripts -%}
+        {% if settings.env === 'development' -%}
+            <script type="text/javascript" src="{{ path.script }}/{{ jsfile }}.js"></script>
+        {% elseif settings.env === 'production' -%}
+            <script type="text/javascript" src="{{ path.script }}/{{ jsfile }}.min.js"></script>
+        {%- endif %}
     {%- endfor %}
     </body>
 </html>
