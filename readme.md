@@ -1,3 +1,4 @@
+# **MOVED TO [Sails Blueprint Generator](https://github.com/mahdaen/sails-blueprint-generate)**
 ## **SailsJS Blueprint with Swig Template Engine**
 
 This is **sails** app blueprint to work with **swig** template instead of **ejs**.
